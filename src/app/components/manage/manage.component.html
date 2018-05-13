@@ -1,0 +1,18 @@
+<app-sidebar>
+  <form class="manage" #f="ngForm">
+    <div class="manage__message" *ngIf="!isValid">
+      <span>Sorry, JSON is not valid or empty!</span>
+    </div>
+
+    <div class="manage__form-group">
+      <label>Put JSON here:
+        <textarea cols="30" rows="30" name="grid" [(ngModel)]="gridValue"></textarea>
+      </label>
+    </div>
+
+    <div class="manage__button-group">
+      <button class="manage__submit" type="submit" (click)="onSubmit()" [disabled]="!isValid">Implement</button>
+      <button class="manage__reset" (click)="onReset()">Reset</button>
+    </div>
+  </form>
+</app-sidebar>

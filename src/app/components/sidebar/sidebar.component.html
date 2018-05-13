@@ -1,0 +1,9 @@
+<div *ngIf="showSidebar" class="sidebar" [@sidebarState]>
+  <div class="sidebar__title">
+    <h2>Manage grid</h2>
+    <span class="sidebar__close" title="close sidebar" (click)="closeSidebar()">x</span>
+  </div>
+  <div class="sidebar__body">
+    <ng-content></ng-content>
+  </div>
+</div>

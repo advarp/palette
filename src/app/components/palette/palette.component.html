@@ -1,0 +1,11 @@
+<div class="palette">
+  <div class="palette__row">
+    <div class="palette__column"
+         [drag]="{data: color}"
+         draggable="true"
+         [ngStyle]="{backgroundColor: color.rgb}"
+         *ngFor="let color of colors">
+      {{color.name}}
+    </div>
+  </div>
+</div>

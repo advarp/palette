@@ -1,0 +1,16 @@
+<form class="generator" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="generator__group">
+    <label [for]="rows">Rows:</label>
+    <input [id]="rows" class="generator__input" type="number" name="rows" placeholder="_" ngModel min="1" max="30">
+  </div>
+
+  <div class="generator__group">
+    <label [for]="columns">Columns:</label>
+    <input [id]="columns" class="generator__input" type="number" name="columns" placeholder="_" ngModel min="1" max="30">
+  </div>
+
+  <button class="generator__submit" type="submit">
+    <span *ngIf="!isGenerated; else generated">Build</span>
+    <ng-template #generated>Rebuild</ng-template>
+  </button>
+</form>

@@ -1,0 +1,38 @@
+@import "./../../../styles";
+
+:host {
+  width: 100%;
+}
+
+.generator {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #e2e2e2;
+  padding: 15px 25px;
+
+  &__group {
+    label {
+      margin-right: 10px;
+      font-size:  14px;
+    }
+
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+
+  }
+
+  &__input {
+    height: 30px;
+    margin: 0;
+    padding: 0 15px;
+    display: inline-block;
+    box-sizing: border-box;
+
+  }
+
+  &__submit {
+    @extend .button__default;
+  }
+
+}
